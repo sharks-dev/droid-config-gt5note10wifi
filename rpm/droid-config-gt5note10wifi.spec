@@ -14,7 +14,12 @@
 # Pixel ratio 1.0 was originally jolla phone with 245ppi, and the devices
 # should roughly have their ppi compared to that. Large displays can use
 # bigger ratio if seen fit. Values are with 0.25 increments.
-%define pixel_ratio 1.0
+%define pixel_ratio 0.75
+
+# Device-specific ofono configuration
+Provides: ofono-configs
+Obsoletes: ofono-configs-mer
+Obsoletes: ofono-configs-binder
 
 %include droid-configs-device/droid-configs.inc
 %include patterns/patterns-sailfish-device-adaptation-gt5note10wifi.inc
